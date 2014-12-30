@@ -17,8 +17,10 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.filechooser.FileFilter;
 import volume.Volume;
+import volvis.CompRenderer;
 import volvis.MIPRenderer;
 import volvis.MIPRendererhi;
+import volvis.OpacityRenderer;
 import volvis.RaycastRenderer;
 import volvis.Renderer;
 import volvis.TFRenderer;
@@ -36,6 +38,8 @@ public class VolVisApplication extends javax.swing.JFrame {
     MIPRenderer MIPRenderer;
     MIPRendererhi MIPRendererhi;
     TFRenderer TFRenderer;
+    CompRenderer compRenderer;
+    OpacityRenderer opRenderer;
 
     /**
      * Creates new form VolVisApplication
@@ -70,6 +74,16 @@ public class VolVisApplication extends javax.swing.JFrame {
         visualization.addRenderer(TFRenderer);
         TFRenderer.addTFChangeListener(visualization);
         tabbedPanel.addTab("transfer", TFRenderer.getPanel());
+
+        compRenderer = new CompRenderer();
+        visualization.addRenderer(compRenderer);
+        compRenderer.addTFChangeListener(visualization);
+        tabbedPanel.addTab("Composition", compRenderer.getPanel());
+
+        opRenderer = new OpacityRenderer();
+        visualization.addRenderer(opRenderer);
+        opRenderer.addTFChangeListener(visualization);
+        tabbedPanel.addTab("Opacity Weighting", opRenderer.getPanel());
 
         tabbedPanel.addChangeListener(new ChangeListener() {
 
