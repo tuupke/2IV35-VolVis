@@ -1,4 +1,3 @@
-
 package volvis;
 
 import com.jogamp.opengl.util.texture.Texture;
@@ -43,7 +42,6 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
         tfEditor = new TransferFunctionEditor(tFunc, volume.getHistogram());
         panel.setTransferFunctionEditor(tfEditor);
 
-
     }
 
     @Override
@@ -55,6 +53,47 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
 
     public RaycastRendererPanel getPanel() {
         return panel;
+    }
+
+    short[] getVoxels(double[] coord, double[] vector) {
+        int atX = (int) Math.round(coord[0]);
+        int atY = (int) Math.round(coord[1]);
+        int atZ = (int) Math.round(coord[2]);
+
+        int[] vect = new int[]{
+            (int) Math.round(vector[0]),
+            (int) Math.round(vector[1]),
+            (int) Math.round(vector[2])
+        };
+
+        int slices = 10;
+
+        // 0 = x * a + b
+        //-b / x = a;
+        double xZeroAt = -coord[0] / vector[0];
+        double yZeroAt = -coord[1] / vector[1];
+        double zZeroAt = -coord[2] / vector[2];
+
+        // max = x * a + b;
+        // (max - b) / x = a
+        double xMaxAt = (volume.getDimX() - vect[0]) / coord[0];
+        double yMaxAt = (volume.getDimY() - vect[1]) / coord[1];
+        double zMaxAt = (volume.getDimZ() - vect[2]) / coord[2];
+
+        double start = Math.max(Math.max(xZeroAt, yZeroAt), zZeroAt);
+        double end = Math.min(Math.min(xMaxAt, yMaxAt), zMaxAt);
+
+        double length = end - start;
+        int diff = (int) Math.floor(length / (slices - 1));
+
+        short[] fuckDezeShit = new short[slices];
+        for (int i = 0; i < slices; i++) {
+            int x = (int) Math.round(coord[0] + vector[0] * (start + diff * i));
+            int y = (int) Math.round(coord[1] + vector[1] * (start + diff * i));
+            int z = (int) Math.round(coord[2] + vector[2] * (start + diff * i));
+            fuckDezeShit[i] = volume.getVoxel(x, y, z);
+        }
+        return fuckDezeShit;
     }
 
     // get a voxel from the volume data by nearest neighbor interpolation
@@ -96,7 +135,7 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
         double[] pixelCoord = new double[3];
         double[] volumeCenter = new double[3];
         VectorMath.setVector(volumeCenter, volume.getDimX() / 2, volume.getDimY() / 2, volume.getDimZ() / 2);
-
+        
         // sample on a plane through the origin of the volume data
         double max = volume.getMaximum();
         for (int j = 0; j < image.getHeight(); j++) {
@@ -109,9 +148,10 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
                         + volumeCenter[2];
 
                 int val = getVoxel(pixelCoord);
+                short[] blub = getVoxels(pixelCoord, viewVec);
                 // Apply the transfer function to obtain a color
                 TFColor voxelColor = tFunc.getColor(val);
-                
+
                 // BufferedImage expects a pixel color packed as ARGB in an int
                 int c_alpha = voxelColor.a <= 1.0 ? (int) Math.floor(voxelColor.a * 255) : 255;
                 int c_red = voxelColor.r <= 1.0 ? (int) Math.floor(voxelColor.r * 255) : 255;
@@ -121,7 +161,6 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
                 image.setRGB(i, j, pixelColor);
             }
         }
-
 
     }
 
@@ -187,7 +226,6 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
     @Override
     public void visualize(GL2 gl) {
 
-
         if (volume == null) {
             return;
         }
@@ -231,7 +269,6 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
         gl.glPopMatrix();
 
         gl.glPopAttrib();
-
 
         if (gl.glGetError() > 0) {
             System.out.println("some OpenGL error: " + gl.glGetError());
