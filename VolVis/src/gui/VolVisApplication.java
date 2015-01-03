@@ -243,6 +243,7 @@ public class VolVisApplication extends javax.swing.JFrame {
             MIPRenderer.setVolume(volume);
             MIPRendererhi.setVolume(volume);
             TFRenderer.setVolume(volume);
+            opRenderer.setVolume(volume);
             visualization.getRenderers().get(0).setVisible(true);
             visualization.update();
 

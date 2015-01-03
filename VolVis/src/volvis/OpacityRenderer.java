@@ -56,43 +56,50 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
     }
 
     short[] getVoxels(double[] coord, double[] vector) {
-        int atX = (int) Math.round(coord[0]);
-        int atY = (int) Math.round(coord[1]);
-        int atZ = (int) Math.round(coord[2]);
 
-        int[] vect = new int[]{
-            (int) Math.round(vector[0]),
-            (int) Math.round(vector[1]),
-            (int) Math.round(vector[2])
-        };
+        int slices = 20;
 
-        int slices = 10;
-
-        // 0 = x * a + b
-        //-b / x = a;
+        // 0 = a * x + start
+        // a = -start / x
         double xZeroAt = -coord[0] / vector[0];
         double yZeroAt = -coord[1] / vector[1];
         double zZeroAt = -coord[2] / vector[2];
 
-        // max = x * a + b;
-        // (max - b) / x = a
-        double xMaxAt = (volume.getDimX() - vect[0]) / coord[0];
-        double yMaxAt = (volume.getDimY() - vect[1]) / coord[1];
-        double zMaxAt = (volume.getDimZ() - vect[2]) / coord[2];
+        xZeroAt = vector[0] == 0 ? -Double.MAX_VALUE : xZeroAt;
+        yZeroAt = vector[1] == 0 ? -Double.MAX_VALUE : yZeroAt;
+        zZeroAt = vector[2] == 0 ? -Double.MAX_VALUE : zZeroAt;
+
+        // max = a * x + start
+        // a = (max - start) / x;
+        double xMaxAt = (volume.getDimX() - coord[0]) / vector[0];
+        double yMaxAt = (volume.getDimY() - coord[1]) / vector[1];
+        double zMaxAt = (volume.getDimZ() - coord[2]) / vector[2];
+
+        xMaxAt = vector[0] == 0 ? Double.MAX_VALUE : xMaxAt;
+        yMaxAt = vector[1] == 0 ? Double.MAX_VALUE : yMaxAt;
+        zMaxAt = vector[2] == 0 ? Double.MAX_VALUE : zMaxAt;
 
         double start = Math.max(Math.max(xZeroAt, yZeroAt), zZeroAt);
         double end = Math.min(Math.min(xMaxAt, yMaxAt), zMaxAt);
 
         double length = end - start;
         int diff = (int) Math.floor(length / (slices - 1));
-
+        /*System.out.println("Coord: ("+coord[0]+", "+coord[1]+", "+coord[2]+")");
+        System.out.println("Coord: ("+vector[0]+", "+vector[1]+", "+vector[2]+")");
+        System.out.println("Spec: "+start+" "+end+" "+diff);
+        System.out.println("Mins: "+xZeroAt+" "+yZeroAt+" "+zZeroAt);
+        System.out.println("Maxs: "+xMaxAt+" "+yMaxAt+" "+zMaxAt);*/
         short[] fuckDezeShit = new short[slices];
         for (int i = 0; i < slices; i++) {
             int x = (int) Math.round(coord[0] + vector[0] * (start + diff * i));
             int y = (int) Math.round(coord[1] + vector[1] * (start + diff * i));
             int z = (int) Math.round(coord[2] + vector[2] * (start + diff * i));
-            fuckDezeShit[i] = volume.getVoxel(x, y, z);
+//            System.out.println("Voxel: (" + x + ", " + y + ", " + z + ")");
+            fuckDezeShit[i] = ((x >= 0) && (x < volume.getDimX()) && (y >= 0) && (y < volume.getDimY())
+                && (z >= 0) && (z < volume.getDimZ()))?volume.getVoxel(x, y, z):0;
         }
+//        System.out.println("\n\n");
+
         return fuckDezeShit;
     }
 
@@ -135,9 +142,9 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
         double[] pixelCoord = new double[3];
         double[] volumeCenter = new double[3];
         VectorMath.setVector(volumeCenter, volume.getDimX() / 2, volume.getDimY() / 2, volume.getDimZ() / 2);
-        
+
         // sample on a plane through the origin of the volume data
-        double max = volume.getMaximum();
+//        double max = volume.getMaximum();
         for (int j = 0; j < image.getHeight(); j++) {
             for (int i = 0; i < image.getWidth(); i++) {
                 pixelCoord[0] = uVec[0] * (i - imageCenter) + vVec[0] * (j - imageCenter)
@@ -147,17 +154,25 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
                 pixelCoord[2] = uVec[2] * (i - imageCenter) + vVec[2] * (j - imageCenter)
                         + volumeCenter[2];
 
-                int val = getVoxel(pixelCoord);
                 short[] blub = getVoxels(pixelCoord, viewVec);
-                // Apply the transfer function to obtain a color
-                TFColor voxelColor = tFunc.getColor(val);
+                double c_red, c_green, c_blue, c_mult;
+                c_red = c_green = c_blue = 0;
+                c_mult = 1;
+                for (int q = 0; q < blub.length; q++) {
+                    TFColor voxelColor = tFunc.getColor(blub[q]);
 
-                // BufferedImage expects a pixel color packed as ARGB in an int
-                int c_alpha = voxelColor.a <= 1.0 ? (int) Math.floor(voxelColor.a * 255) : 255;
-                int c_red = voxelColor.r <= 1.0 ? (int) Math.floor(voxelColor.r * 255) : 255;
-                int c_green = voxelColor.g <= 1.0 ? (int) Math.floor(voxelColor.g * 255) : 255;
-                int c_blue = voxelColor.b <= 1.0 ? (int) Math.floor(voxelColor.b * 255) : 255;
-                int pixelColor = (c_alpha << 24) | (c_red << 16) | (c_green << 8) | c_blue;
+                    double curMult = c_mult * voxelColor.a;
+
+                    c_red += curMult * (voxelColor.r <= 1.0 ? voxelColor.r : 1);
+                    c_green += curMult * (voxelColor.g <= 1.0 ? voxelColor.g : 1);
+                    c_blue += curMult * (voxelColor.b <= 1.0 ? voxelColor.b : 1);
+                    c_mult *= (1 - voxelColor.a);
+                }
+                int red = (int) Math.round(c_red * 255);
+                int blue = (int) Math.round(c_blue * 255);
+                int green = (int) Math.round(c_green * 255);
+                // (c_alpha << 24) | 
+                int pixelColor = (255 << 24) | (red << 16) | (green << 8) | blue;
                 image.setRGB(i, j, pixelColor);
             }
         }
