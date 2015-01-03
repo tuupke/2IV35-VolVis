@@ -20,6 +20,7 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
     RaycastRendererPanel panel;
     TransferFunction tFunc;
     TransferFunctionEditor tfEditor;
+    int count = 0;
 
     public OpacityRenderer() {
         panel = new RaycastRendererPanel(this);
@@ -56,8 +57,8 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
     }
 
     short[] getVoxels(double[] coord, double[] vector) {
-
-        int slices = 20;
+        
+        int slices = 5;
 
         // 0 = a * x + start
         // a = -start / x
@@ -84,6 +85,10 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
 
         double length = end - start;
         int diff = (int) Math.floor(length / (slices - 1));
+        if(count++ == 100000){
+            System.out.println("Coord: ("+vector[0]+", "+vector[1]+", "+vector[2]+")");
+            count = 0;
+        }
         /*System.out.println("Coord: ("+coord[0]+", "+coord[1]+", "+coord[2]+")");
         System.out.println("Coord: ("+vector[0]+", "+vector[1]+", "+vector[2]+")");
         System.out.println("Spec: "+start+" "+end+" "+diff);
@@ -135,14 +140,16 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
         VectorMath.setVector(viewVec, viewMatrix[2], viewMatrix[6], viewMatrix[10]);
         VectorMath.setVector(uVec, viewMatrix[0], viewMatrix[4], viewMatrix[8]);
         VectorMath.setVector(vVec, viewMatrix[1], viewMatrix[5], viewMatrix[9]);
-
+//        viewVec[0] = Math.abs(viewVec[0]);
+//        viewVec[1] = Math.abs(viewVec[1]);
+//        viewVec[2] = Math.abs(viewVec[2]);
         // image is square
         int imageCenter = image.getWidth() / 2;
 
         double[] pixelCoord = new double[3];
         double[] volumeCenter = new double[3];
         VectorMath.setVector(volumeCenter, volume.getDimX() / 2, volume.getDimY() / 2, volume.getDimZ() / 2);
-
+        
         // sample on a plane through the origin of the volume data
 //        double max = volume.getMaximum();
         for (int j = 0; j < image.getHeight(); j++) {
@@ -154,6 +161,7 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
                 pixelCoord[2] = uVec[2] * (i - imageCenter) + vVec[2] * (j - imageCenter)
                         + volumeCenter[2];
 
+//                int val = getVoxel(pixelCoord);
                 short[] blub = getVoxels(pixelCoord, viewVec);
                 double c_red, c_green, c_blue, c_mult;
                 c_red = c_green = c_blue = 0;
