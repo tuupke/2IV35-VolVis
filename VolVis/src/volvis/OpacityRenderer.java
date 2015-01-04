@@ -58,13 +58,39 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
 
     short[] getVoxels(double[] coord, double[] vector) {
         
-        int slices = 5;
+        int slices = 50;
 
         // 0 = a * x + start
         // a = -start / x
-        double xZeroAt = -coord[0] / vector[0];
-        double yZeroAt = -coord[1] / vector[1];
-        double zZeroAt = -coord[2] / vector[2];
+        double xZeroAt, yZeroAt, zZeroAt;
+        double xMaxAt, yMaxAt, zMaxAt;
+        
+        if(vector[0]>=0){
+            xZeroAt = -coord[0] / vector[0];
+            xMaxAt = (volume.getDimX() - coord[0]) / vector[0];
+        } else {
+            xZeroAt = (volume.getDimX() - coord[0]) / vector[0];
+            xMaxAt = -coord[0] / vector[0];
+        }
+        
+        if(vector[1]>=0){
+            yZeroAt = -coord[1] / vector[1];
+            yMaxAt = (volume.getDimY() - coord[1]) / vector[1];
+        } else {
+            yZeroAt = (volume.getDimY() - coord[1]) / vector[1];
+            yMaxAt = -coord[1] / vector[1];
+        }
+        
+        if(vector[2]>=0){
+            zZeroAt = -coord[2] / vector[2];
+            zMaxAt = (volume.getDimZ() - coord[2]) / vector[2];
+        } else {
+            zZeroAt = (volume.getDimZ() - coord[2]) / vector[2];
+            zMaxAt = -coord[2] / vector[2];
+        }
+//        double xZeroAt = -coord[0] / vector[0];
+//        double yZeroAt = -coord[1] / vector[1];
+//        double zZeroAt = -coord[2] / vector[2];
 
         xZeroAt = vector[0] == 0 ? -Double.MAX_VALUE : xZeroAt;
         yZeroAt = vector[1] == 0 ? -Double.MAX_VALUE : yZeroAt;
@@ -72,9 +98,9 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
 
         // max = a * x + start
         // a = (max - start) / x;
-        double xMaxAt = (volume.getDimX() - coord[0]) / vector[0];
-        double yMaxAt = (volume.getDimY() - coord[1]) / vector[1];
-        double zMaxAt = (volume.getDimZ() - coord[2]) / vector[2];
+//        double xMaxAt = (volume.getDimX() - coord[0]) / vector[0];
+//        double yMaxAt = (volume.getDimY() - coord[1]) / vector[1];
+//        double zMaxAt = (volume.getDimZ() - coord[2]) / vector[2];
 
         xMaxAt = vector[0] == 0 ? Double.MAX_VALUE : xMaxAt;
         yMaxAt = vector[1] == 0 ? Double.MAX_VALUE : yMaxAt;
@@ -84,23 +110,20 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
         double end = Math.min(Math.min(xMaxAt, yMaxAt), zMaxAt);
 
         double length = end - start;
-        int diff = (int) Math.floor(length / (slices - 1));
-        if(count++ == 100000){
-            System.out.println("Coord: ("+vector[0]+", "+vector[1]+", "+vector[2]+")");
-            count = 0;
-        }
+        double diff = (length / (slices - 1));
+
         /*System.out.println("Coord: ("+coord[0]+", "+coord[1]+", "+coord[2]+")");
         System.out.println("Coord: ("+vector[0]+", "+vector[1]+", "+vector[2]+")");
         System.out.println("Spec: "+start+" "+end+" "+diff);
         System.out.println("Mins: "+xZeroAt+" "+yZeroAt+" "+zZeroAt);
         System.out.println("Maxs: "+xMaxAt+" "+yMaxAt+" "+zMaxAt);*/
         short[] fuckDezeShit = new short[slices];
-        for (int i = 0; i < slices; i++) {
-            int x = (int) Math.round(coord[0] + vector[0] * (start + diff * i));
-            int y = (int) Math.round(coord[1] + vector[1] * (start + diff * i));
-            int z = (int) Math.round(coord[2] + vector[2] * (start + diff * i));
+        for (double i = 0; i < slices; i++) {
+            int x = (int) Math.round((double) coord[0] + (double) vector[0] * ((double) start + (double) diff * i));
+            int y = (int) Math.round((double) coord[1] + (double) vector[1] * ((double) start + (double) diff * i));
+            int z = (int) Math.round((double) coord[2] + (double) vector[2] * ((double) start + (double) diff * i));
 //            System.out.println("Voxel: (" + x + ", " + y + ", " + z + ")");
-            fuckDezeShit[i] = ((x >= 0) && (x < volume.getDimX()) && (y >= 0) && (y < volume.getDimY())
+            fuckDezeShit[(int) i] = ((x >= 0) && (x < volume.getDimX()) && (y >= 0) && (y < volume.getDimY())
                 && (z >= 0) && (z < volume.getDimZ()))?volume.getVoxel(x, y, z):0;
         }
 //        System.out.println("\n\n");
@@ -166,7 +189,7 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
                 double c_red, c_green, c_blue, c_mult;
                 c_red = c_green = c_blue = 0;
                 c_mult = 1;
-                for (int q = 0; q < blub.length; q++) {
+                for (int q = blub.length - 1; q >= 0; q--) {
                     TFColor voxelColor = tFunc.getColor(blub[q]);
 
                     double curMult = c_mult * voxelColor.a;
