@@ -80,7 +80,7 @@ public class VolVisApplication extends javax.swing.JFrame {
         compRenderer.addTFChangeListener(visualization);
         tabbedPanel.addTab("Composition", compRenderer.getPanel());
 
-        opRenderer = new OpacityRenderer();
+        opRenderer = new OpacityRenderer(visualization);
         visualization.addRenderer(opRenderer);
         opRenderer.addTFChangeListener(visualization);
         tabbedPanel.addTab("Opacity Weighting", opRenderer.getPanel());

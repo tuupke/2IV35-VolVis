@@ -2,6 +2,7 @@ package volvis;
 
 import com.jogamp.opengl.util.texture.Texture;
 import com.jogamp.opengl.util.texture.awt.AWTTextureIO;
+import gui.MIPRendererPanel;
 import gui.RaycastRendererPanel;
 import gui.TransferFunctionEditor;
 import java.awt.image.BufferedImage;
@@ -17,13 +18,13 @@ import volume.Volume;
 public class OpacityRenderer extends Renderer implements TFChangeListener {
 
     private Volume volume = null;
-    RaycastRendererPanel panel;
+    MIPRendererPanel panel;
     TransferFunction tFunc;
     TransferFunctionEditor tfEditor;
     int count = 0;
 
-    public OpacityRenderer() {
-        panel = new RaycastRendererPanel(this);
+    public OpacityRenderer(Visualization vis) {
+        panel = new MIPRendererPanel(this, vis);
         panel.setSpeedLabel("0");
     }
 
@@ -52,14 +53,11 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
         }
     }
 
-    public RaycastRendererPanel getPanel() {
+    public MIPRendererPanel getPanel() {
         return panel;
     }
 
     short[] getVoxels(double[] coord, double[] vector) {
-        
-        int slices = 50;
-
         // 0 = a * x + start
         // a = -start / x
         double xZeroAt, yZeroAt, zZeroAt;
@@ -108,7 +106,7 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
 
         double start = Math.max(Math.max(xZeroAt, yZeroAt), zZeroAt);
         double end = Math.min(Math.min(xMaxAt, yMaxAt), zMaxAt);
-
+        int slices = Integer.parseInt(panel.Samples.getValue().toString());
         double length = end - start;
         double diff = (length / (slices - 1));
 
