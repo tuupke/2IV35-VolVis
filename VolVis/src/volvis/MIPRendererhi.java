@@ -62,7 +62,7 @@ public class MIPRendererhi extends Renderer implements TFChangeListener {
         return panel;
     }
 
-    // get a voxel from the volume data by nearest neighbor interpolation
+    // get a voxel from the volume data by trilinear interpolation
     short getVoxel(double[] coord) {
         short[] S = new short[8];
         double a = 0, b = 0, g = 0;
