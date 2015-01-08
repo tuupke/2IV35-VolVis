@@ -166,7 +166,7 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
 //        viewVec[2] = Math.abs(viewVec[2]);
         // image is square
         int imageCenter = image.getWidth() / 2;
-
+        
         double[] pixelCoord = new double[3];
         double[] volumeCenter = new double[3];
         VectorMath.setVector(volumeCenter, volume.getDimX() / 2, volume.getDimY() / 2, volume.getDimZ() / 2);
@@ -184,24 +184,34 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
 
 //                int val = getVoxel(pixelCoord);
                 short[] blub = getVoxels(pixelCoord, viewVec);
-                double c_red, c_green, c_blue, c_mult;
-                c_red = c_green = c_blue = 0;
+                double c_red, c_green, c_blue, c_mult, c_alpha;
+                c_red = c_green = c_blue = c_alpha = 0;
                 c_mult = 1;
                 for (int q = blub.length - 1; q >= 0; q--) {
+//                    System.out.println(blub[q]);
+//                    if(blub[q]==1 || blub[q]){
+//                        continue;
+//                    }
+//                    System.out.println(blub[q]);
                     TFColor voxelColor = tFunc.getColor(blub[q]);
 
-                    double curMult = c_mult * voxelColor.a;
-
+                    double curMult = (voxelColor.a <= 1.0 ? voxelColor.a : 1);
+                    c_red *= (1-curMult);
+                    c_green *= (1-curMult);
+                    c_blue *= (1-curMult);
                     c_red += curMult * (voxelColor.r <= 1.0 ? voxelColor.r : 1);
                     c_green += curMult * (voxelColor.g <= 1.0 ? voxelColor.g : 1);
                     c_blue += curMult * (voxelColor.b <= 1.0 ? voxelColor.b : 1);
-                    c_mult *= (1 - voxelColor.a);
+                    c_alpha += curMult * (voxelColor.a <= 1.0 ? voxelColor.a : 1);
+                    //c_mult = (1 - (voxelColor.a <= 1.0 ? voxelColor.a : 1));
                 }
                 int red = (int) Math.round(c_red * 255);
                 int blue = (int) Math.round(c_blue * 255);
                 int green = (int) Math.round(c_green * 255);
+                int alpha = (int) Math.round(c_alpha * 255);
+                
                 // (c_alpha << 24) | 
-                int pixelColor = (255 << 24) | (red << 16) | (green << 8) | blue;
+                int pixelColor = (254 << 24) | (red << 16) | (green << 8) | blue;
                 image.setRGB(i, j, pixelColor);
             }
         }

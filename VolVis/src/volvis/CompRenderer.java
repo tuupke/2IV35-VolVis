@@ -121,8 +121,6 @@ public class CompRenderer extends Renderer implements TFChangeListener {
                 image.setRGB(i, j, pixelColor);
             }
         }
-
-
     }
 
     private void drawBoundingBox(GL2 gl) {
