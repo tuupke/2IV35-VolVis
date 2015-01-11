@@ -25,6 +25,16 @@ public class TransferFunctionEditor extends javax.swing.JPanel {
      */
     public TransferFunctionEditor(TransferFunction tfunc, int[] histogram) {
         initComponents();
+        this.jSpinner1.setVisible(false);
+        this.jLabel7.setVisible(false);
+        this.tfunc = tfunc;
+        this.tfView = new TransferFunctionView(tfunc, histogram, this);
+        histogramPanel.setLayout(new BorderLayout());
+        histogramPanel.add(tfView, BorderLayout.CENTER);
+    }    
+    
+    public TransferFunctionEditor(TransferFunction tfunc, int[] histogram, boolean a) {
+        initComponents();
 
         this.tfunc = tfunc;
         this.tfView = new TransferFunctionView(tfunc, histogram, this);
@@ -59,6 +69,8 @@ public class TransferFunctionEditor extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jSpinner1 = new javax.swing.JSpinner();
 
         org.jdesktop.layout.GroupLayout histogramPanelLayout = new org.jdesktop.layout.GroupLayout(histogramPanel);
         histogramPanel.setLayout(histogramPanelLayout);
@@ -79,7 +91,6 @@ public class TransferFunctionEditor extends javax.swing.JPanel {
 
         scalarTextField.setEditable(false);
         scalarTextField.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        scalarTextField.setFocusTraversalKeysEnabled(false);
         scalarTextField.setFocusable(false);
         scalarTextField.setMaximumSize(new java.awt.Dimension(84, 28));
         scalarTextField.setMinimumSize(new java.awt.Dimension(84, 28));
@@ -87,7 +98,6 @@ public class TransferFunctionEditor extends javax.swing.JPanel {
         opacityTextField.setEditable(false);
         opacityTextField.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         opacityTextField.setToolTipText("");
-        opacityTextField.setFocusTraversalKeysEnabled(false);
         opacityTextField.setFocusable(false);
         opacityTextField.setMaximumSize(new java.awt.Dimension(84, 28));
         opacityTextField.setMinimumSize(new java.awt.Dimension(84, 28));
@@ -105,7 +115,7 @@ public class TransferFunctionEditor extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(0, 299, Short.MAX_VALUE)
+            .add(0, 89, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -116,6 +126,14 @@ public class TransferFunctionEditor extends javax.swing.JPanel {
         jLabel5.setText("<html>Scalar value &rarr;</html>");
 
         jLabel6.setText("<html>&uarr;</html>");
+
+        jLabel7.setText("Gradient scaling factor");
+
+        jSpinner1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSpinner1StateChanged(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(this);
         this.setLayout(layout);
@@ -136,6 +154,10 @@ public class TransferFunctionEditor extends javax.swing.JPanel {
                                 .add(colorButton, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
                                 .add(opacityTextField, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                            .add(jLabel7)
+                            .add(jSpinner1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 85, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 67, Short.MAX_VALUE)
                         .add(jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
                     .add(layout.createSequentialGroup()
@@ -176,7 +198,11 @@ public class TransferFunctionEditor extends javax.swing.JPanel {
                         .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(jLabel3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 22, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(colorButton)))
-                    .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(layout.createSequentialGroup()
+                        .add(jLabel7)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                        .add(jSpinner1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                 .add(0, 46, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -192,6 +218,11 @@ public class TransferFunctionEditor extends javax.swing.JPanel {
         }
 
     }//GEN-LAST:event_colorButtonActionPerformed
+
+    private void jSpinner1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSpinner1StateChanged
+        this.tfunc.setNum(Integer.parseInt(jSpinner1.getValue().toString()));
+    }//GEN-LAST:event_jSpinner1StateChanged
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton colorButton;
     private javax.swing.JPanel histogramPanel;
@@ -201,7 +232,9 @@ public class TransferFunctionEditor extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTextField opacityTextField;
     private javax.swing.JTextField scalarTextField;
     // End of variables declaration//GEN-END:variables

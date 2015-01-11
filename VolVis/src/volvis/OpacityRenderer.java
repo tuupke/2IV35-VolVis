@@ -6,6 +6,8 @@ import gui.MIPRendererPanel;
 import gui.RaycastRendererPanel;
 import gui.TransferFunctionEditor;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
+import javafx.util.Pair;
 import javax.media.opengl.GL2;
 import util.TFChangeListener;
 import util.VectorMath;
@@ -30,7 +32,7 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
 
     public void setVolume(Volume vol) {
         volume = vol;
-
+        System.out.println(vol.getMaximum() + " " + vol.getMinimum());
         // set up image for storing the resulting rendering
         // the image width and height are equal to the length of the volume diagonal
         int imageSize = (int) Math.floor(Math.sqrt(vol.getDimX() * vol.getDimX() + vol.getDimY() * vol.getDimY()
@@ -41,7 +43,7 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
         image = new BufferedImage(imageSize, imageSize, BufferedImage.TYPE_INT_ARGB);
         tFunc = new TransferFunction(volume.getMinimum(), volume.getMaximum());
         tFunc.addTFChangeListener(this);
-        tfEditor = new TransferFunctionEditor(tFunc, volume.getHistogram());
+        tfEditor = new TransferFunctionEditor(tFunc, volume.getHistogram(), true);
         panel.setTransferFunctionEditor(tfEditor);
 
     }
@@ -58,47 +60,37 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
     }
 
     short[] getVoxels(double[] coord, double[] vector) {
-        // 0 = a * x + start
-        // a = -start / x
+
         double xZeroAt, yZeroAt, zZeroAt;
         double xMaxAt, yMaxAt, zMaxAt;
-        
-        if(vector[0]>=0){
+
+        if (vector[0] >= 0) {
             xZeroAt = -coord[0] / vector[0];
             xMaxAt = (volume.getDimX() - coord[0]) / vector[0];
         } else {
             xZeroAt = (volume.getDimX() - coord[0]) / vector[0];
             xMaxAt = -coord[0] / vector[0];
         }
-        
-        if(vector[1]>=0){
+
+        if (vector[1] >= 0) {
             yZeroAt = -coord[1] / vector[1];
             yMaxAt = (volume.getDimY() - coord[1]) / vector[1];
         } else {
             yZeroAt = (volume.getDimY() - coord[1]) / vector[1];
             yMaxAt = -coord[1] / vector[1];
         }
-        
-        if(vector[2]>=0){
+
+        if (vector[2] >= 0) {
             zZeroAt = -coord[2] / vector[2];
             zMaxAt = (volume.getDimZ() - coord[2]) / vector[2];
         } else {
             zZeroAt = (volume.getDimZ() - coord[2]) / vector[2];
             zMaxAt = -coord[2] / vector[2];
         }
-//        double xZeroAt = -coord[0] / vector[0];
-//        double yZeroAt = -coord[1] / vector[1];
-//        double zZeroAt = -coord[2] / vector[2];
 
         xZeroAt = vector[0] == 0 ? -Double.MAX_VALUE : xZeroAt;
         yZeroAt = vector[1] == 0 ? -Double.MAX_VALUE : yZeroAt;
         zZeroAt = vector[2] == 0 ? -Double.MAX_VALUE : zZeroAt;
-
-        // max = a * x + start
-        // a = (max - start) / x;
-//        double xMaxAt = (volume.getDimX() - coord[0]) / vector[0];
-//        double yMaxAt = (volume.getDimY() - coord[1]) / vector[1];
-//        double zMaxAt = (volume.getDimZ() - coord[2]) / vector[2];
 
         xMaxAt = vector[0] == 0 ? Double.MAX_VALUE : xMaxAt;
         yMaxAt = vector[1] == 0 ? Double.MAX_VALUE : yMaxAt;
@@ -110,23 +102,143 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
         double length = end - start;
         double diff = (length / (slices - 1));
 
-        /*System.out.println("Coord: ("+coord[0]+", "+coord[1]+", "+coord[2]+")");
-        System.out.println("Coord: ("+vector[0]+", "+vector[1]+", "+vector[2]+")");
-        System.out.println("Spec: "+start+" "+end+" "+diff);
-        System.out.println("Mins: "+xZeroAt+" "+yZeroAt+" "+zZeroAt);
-        System.out.println("Maxs: "+xMaxAt+" "+yMaxAt+" "+zMaxAt);*/
         short[] fuckDezeShit = new short[slices];
         for (double i = 0; i < slices; i++) {
             int x = (int) Math.round((double) coord[0] + (double) vector[0] * ((double) start + (double) diff * i));
             int y = (int) Math.round((double) coord[1] + (double) vector[1] * ((double) start + (double) diff * i));
             int z = (int) Math.round((double) coord[2] + (double) vector[2] * ((double) start + (double) diff * i));
-//            System.out.println("Voxel: (" + x + ", " + y + ", " + z + ")");
             fuckDezeShit[(int) i] = ((x >= 0) && (x < volume.getDimX()) && (y >= 0) && (y < volume.getDimY())
-                && (z >= 0) && (z < volume.getDimZ()))?volume.getVoxel(x, y, z):0;
+                    && (z >= 0) && (z < volume.getDimZ())) ? volume.getVoxel(x, y, z) : 0;
         }
-//        System.out.println("\n\n");
 
         return fuckDezeShit;
+    }
+
+    double[] getRayColor(double[] coord, double[] vector) {
+
+        double xZeroAt, yZeroAt, zZeroAt;
+        double xMaxAt, yMaxAt, zMaxAt;
+
+        if (vector[0] >= 0) {
+            xZeroAt = -coord[0] / vector[0];
+            xMaxAt = (volume.getDimX() - coord[0]) / vector[0];
+        } else {
+            xZeroAt = (volume.getDimX() - coord[0]) / vector[0];
+            xMaxAt = -coord[0] / vector[0];
+        }
+
+        if (vector[1] >= 0) {
+            yZeroAt = -coord[1] / vector[1];
+            yMaxAt = (volume.getDimY() - coord[1]) / vector[1];
+        } else {
+            yZeroAt = (volume.getDimY() - coord[1]) / vector[1];
+            yMaxAt = -coord[1] / vector[1];
+        }
+
+        if (vector[2] >= 0) {
+            zZeroAt = -coord[2] / vector[2];
+            zMaxAt = (volume.getDimZ() - coord[2]) / vector[2];
+        } else {
+            zZeroAt = (volume.getDimZ() - coord[2]) / vector[2];
+            zMaxAt = -coord[2] / vector[2];
+        }
+
+        xZeroAt = vector[0] == 0 ? -Double.MAX_VALUE : xZeroAt;
+        yZeroAt = vector[1] == 0 ? -Double.MAX_VALUE : yZeroAt;
+        zZeroAt = vector[2] == 0 ? -Double.MAX_VALUE : zZeroAt;
+
+        xMaxAt = vector[0] == 0 ? Double.MAX_VALUE : xMaxAt;
+        yMaxAt = vector[1] == 0 ? Double.MAX_VALUE : yMaxAt;
+        zMaxAt = vector[2] == 0 ? Double.MAX_VALUE : zMaxAt;
+
+        double start = Math.max(Math.max(xZeroAt, yZeroAt), zZeroAt);
+        double end = Math.min(Math.min(xMaxAt, yMaxAt), zMaxAt);
+        int slices = Integer.parseInt(panel.Samples.getValue().toString());
+        double length = end - start;
+        double diff = (length / (slices - 1));
+        double c_red, c_green, c_blue;
+        c_red = c_green = c_blue = 0;
+
+        ArrayList<TransferFunction.ControlPoint> controlPoints = tFunc.getControlPoints();
+        Region[] regions = new Region[(controlPoints.size() - 1) / 2];
+//        if(++count % 10000 == 0){
+//            System.out.println(controlPoints.size());
+//            count = 0;
+//        
+//        }
+        int at = 0;
+        if (regions.length > 1) {
+            for (int i = 1; i < controlPoints.size(); i += 2) {
+                regions[at++] = new Region(controlPoints.get(i).value, controlPoints.get(i).color.a);
+            }
+        }
+
+//        for (double i = slices - 1; i >= 0; i--) {
+        for (double i = 0; i < slices; i++) {
+            int x = (int) Math.round((double) coord[0] + (double) vector[0] * ((double) start + (double) diff * i));
+//            int xp = (int) Math.round((double) coord[0] + (double) vector[0] * ((double) start + (double) diff * (i-1)));
+//            int xn = (int) Math.round((double) coord[0] + (double) vector[0] * ((double) start + (double) diff * (i+1)));
+            int y = (int) Math.round((double) coord[1] + (double) vector[1] * ((double) start + (double) diff * i));
+//            int yp = (int) Math.round((double) coord[1] + (double) vector[1] * ((double) start + (double) diff * (i-1)));
+//            int yn = (int) Math.round((double) coord[1] + (double) vector[1] * ((double) start + (double) diff * (i+1)));
+            int z = (int) Math.round((double) coord[2] + (double) vector[2] * ((double) start + (double) diff * i));
+//            int zp = (int) Math.round((double) coord[2] + (double) vector[2] * ((double) start + (double) diff * (i-1)));
+//            int zn = (int) Math.round((double) coord[2] + (double) vector[2] * ((double) start + (double) diff * (i+1)));
+
+            short fxi = getVoxel(x, y, z);
+
+            TFColor voxelColor = tFunc.getColor(fxi);
+
+            double[] dfxi = new double[]{
+                0.5 * (getVoxel(x - 1, y, z) - getVoxel(x + 1, y, z)),
+                0.5 * (getVoxel(x, y - 1, z) - getVoxel(x, y + 1, z)),
+                0.5 * (getVoxel(x, y, z - 1) - getVoxel(x, y, z + 1))
+            };
+
+            double dfxil = VectorMath.length(dfxi);
+
+            double a = 0;
+            if (regions.length >= 2) {
+                for (int v = 0; v < regions.length - 1; v++) {
+                    if (!(regions[v].v <= fxi && fxi <= regions[v + 1].v)) {
+                        continue;
+                    }
+                    double an = regions[v].a;
+                    double anp1 = regions[v + 1].a;
+
+                    a += anp1 * (fxi - regions[v].v);
+                    a += an * (regions[v + 1].v - fxi);
+                    a /= (regions[v + 1].v - regions[v].v);
+
+                    a *= dfxil / tFunc.num;
+//                a *= voxelColor.a;
+
+                    break;
+                }
+            }
+            if (a == 0) {
+                continue;
+            }
+
+            double ai = 1 - a;
+
+            //c_alpha = ai * c_alpha + (voxelColor.a <= 1.0 ? voxelColor.a : 1) * a;
+            c_red = ai * c_red + (voxelColor.r <= 1.0 ? voxelColor.r : 1) * a;
+            c_green = ai * c_green + (voxelColor.g <= 1.0 ? voxelColor.g : 1) * a;
+            c_blue = ai * c_blue + (voxelColor.b <= 1.0 ? voxelColor.b : 1) * a;
+
+        }
+        return new double[]{c_red, c_green, c_blue};
+
+    }
+
+    short getVoxel(int x, int y, int z) {
+        if ((x >= 0) && (x < volume.getDimX()) && (y >= 0) && (y < volume.getDimY())
+                && (z >= 0) && (z < volume.getDimZ())) {
+            return volume.getVoxel(x, y, z);
+        } else {
+            return 0;
+        }
     }
 
     // get a voxel from the volume data by nearest neighbor interpolation
@@ -161,16 +273,14 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
         VectorMath.setVector(viewVec, viewMatrix[2], viewMatrix[6], viewMatrix[10]);
         VectorMath.setVector(uVec, viewMatrix[0], viewMatrix[4], viewMatrix[8]);
         VectorMath.setVector(vVec, viewMatrix[1], viewMatrix[5], viewMatrix[9]);
-//        viewVec[0] = Math.abs(viewVec[0]);
-//        viewVec[1] = Math.abs(viewVec[1]);
-//        viewVec[2] = Math.abs(viewVec[2]);
+
         // image is square
         int imageCenter = image.getWidth() / 2;
 
         double[] pixelCoord = new double[3];
         double[] volumeCenter = new double[3];
         VectorMath.setVector(volumeCenter, volume.getDimX() / 2, volume.getDimY() / 2, volume.getDimZ() / 2);
-        
+
         // sample on a plane through the origin of the volume data
 //        double max = volume.getMaximum();
         for (int j = 0; j < image.getHeight(); j++) {
@@ -184,22 +294,61 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
 
 //                int val = getVoxel(pixelCoord);
                 short[] blub = getVoxels(pixelCoord, viewVec);
-                double c_red, c_green, c_blue, c_mult;
-                c_red = c_green = c_blue = 0;
-                c_mult = 1;
-                for (int q = blub.length - 1; q >= 0; q--) {
-                    TFColor voxelColor = tFunc.getColor(blub[q]);
 
-                    double curMult = c_mult * voxelColor.a;
+                double[] color = getRayColor(pixelCoord, viewVec);
 
-                    c_red += curMult * (voxelColor.r <= 1.0 ? voxelColor.r : 1);
-                    c_green += curMult * (voxelColor.g <= 1.0 ? voxelColor.g : 1);
-                    c_blue += curMult * (voxelColor.b <= 1.0 ? voxelColor.b : 1);
-                    c_mult *= (1 - voxelColor.a);
-                }
-                int red = (int) Math.round(c_red * 255);
-                int blue = (int) Math.round(c_blue * 255);
-                int green = (int) Math.round(c_green * 255);
+                /*
+                 double c_red, c_green, c_blue, c_mult;
+                 c_red = c_green = c_blue = 0;
+                 c_mult = 1;
+
+                 short[] regions = new short[]{0};
+                 for (int q = blub.length - 1; q >= 0; q--) {
+                 TFColor voxelColor = tFunc.getColor(blub[q]);
+                 int x, y, z;
+                 x = 0;
+                 y = 0;
+                 z = 0;
+                 short fxi = blub[q];
+                    
+                 double[] dfxi = new double[]{
+                 0.5 * (getVoxel(x + 1, y, z) - getVoxel(x - 1, y, z)),
+                 0.5 * (getVoxel(x, y + 1, z) - getVoxel(x, y - 1, z)),
+                 0.5 * (getVoxel(x, y, z + 1) - getVoxel(x, y, z - 1))
+                 };
+
+                 double dfxil = VectorMath.length(dfxi);
+                    
+                 double a = 0;
+                 for (int v = 0; v < regions.length - 1; v++) {
+                 if (!(regions[v] <= fxi && fxi <= regions[v + 1])) {
+                 continue;
+                 }
+                 TFColor n = tFunc.getColor(regions[v]);
+                 TFColor np1 = tFunc.getColor(regions[v + 1]);
+
+                 a += np1.a * (fxi - regions[v]);
+                 a += n.a * (fxi - regions[v]);
+                 a /= (regions[v + 1] - regions[v]);
+
+                 a *= dfxil;
+
+                 break;
+                 }
+
+                 double ai = 1 - a;
+
+                 c_red = ai * c_red + (voxelColor.r <= 1.0 ? voxelColor.r : 1) * a;
+                 c_green = ai * c_green + (voxelColor.g <= 1.0 ? voxelColor.g : 1) * a;
+                 c_blue = ai * c_blue + (voxelColor.b <= 1.0 ? voxelColor.b : 1) * a;
+
+                 }
+                        
+                 */
+                int red = (int) Math.round(color[0] * 255);
+                int blue = (int) Math.round(color[2] * 255);
+                int green = (int) Math.round(color[1] * 255);
+                //int alpha = (int) Math.round(color[3] * 255);
                 // (c_alpha << 24) | 
                 int pixelColor = (255 << 24) | (red << 16) | (green << 8) | blue;
                 image.setRGB(i, j, pixelColor);
@@ -321,4 +470,15 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
     }
     private BufferedImage image;
     private double[] viewMatrix = new double[4 * 4];
+
+    private static class Region {
+
+        public double v;
+        public double a;
+
+        public Region(double v, double a) {
+            this.v = v;
+            this.a = a;
+        }
+    }
 }

@@ -15,6 +15,7 @@ import util.TFChangeListener;
 public class TransferFunction {
 
     private ArrayList<TFChangeListener> listeners = new ArrayList<TFChangeListener>();
+    public int num;
 
     // Construct a default grey-scale transfer function over the scalar range min - max.
     // The opacity increases linearly from 0.0 to 1.0
@@ -48,6 +49,11 @@ public class TransferFunction {
 
     public TFColor getColor(int value) {
         return LUT[computeLUTindex(value)];
+    }
+    
+    public void setNum(int n){
+        this.num = n;
+        this.changed();
     }
 
     public int addControlPoint(int value, double r, double g, double b, double a) {
