@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.1.11)  11 JAN 2015 22:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.1.11)  11 JAN 2015 23:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -276,17 +276,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip57
 )
-(./Report_JvOorschot_0721913.aux
-
-LaTeX Warning: Label `carpOp' multiply defined.
-
-
-LaTeX Warning: Label `toothOp' multiply defined.
-
-
-LaTeX Warning: Label `toothOp2' multiply defined.
-
-)
+(./Report_JvOorschot_0721913.aux)
 \openout1 = `Report_JvOorschot_0721913.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
@@ -303,7 +293,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
 LaTeX Font Info:    ... okay on input line 46.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
 LaTeX Font Info:    ... okay on input line 46.
- (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count115
 \scratchdimen=\dimen118
@@ -370,7 +361,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 \openout4 = `Report_JvOorschot_0721913.toc'.
 
  [2]
-<MB.png, id=182, 854.19125pt x 842.14626pt>
+<MB.png, id=171, 854.19125pt x 842.14626pt>
 File: MB.png Graphic file (type png)
  <use MB.png>
 Package pdftex.def Info: MB.png used on input line 86.
@@ -379,19 +370,19 @@ Package pdftex.def Info: MB.png used on input line 86.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<MBon.png, id=184, 854.19125pt x 842.14626pt>
+<MBon.png, id=173, 854.19125pt x 842.14626pt>
 File: MBon.png Graphic file (type png)
  <use MBon.png>
 Package pdftex.def Info: MBon.png used on input line 94.
 (pdftex.def)             Requested size: 221.32687pt x 218.1947pt.
  [3]
-<MCT.png, id=194, 854.19125pt x 842.14626pt>
+<MCT.png, id=184, 854.19125pt x 842.14626pt>
 File: MCT.png Graphic file (type png)
  <use MCT.png>
 Package pdftex.def Info: MCT.png used on input line 102.
 (pdftex.def)             Requested size: 221.32687pt x 218.1947pt.
 
-<MCS.png, id=195, 854.19125pt x 842.14626pt>
+<MCS.png, id=185, 854.19125pt x 842.14626pt>
 File: MCS.png Graphic file (type png)
  <use MCS.png>
 Package pdftex.def Info: MCS.png used on input line 108.
@@ -403,7 +394,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<MO.png, id=197, 854.19125pt x 842.14626pt>
+<MO.png, id=187, 854.19125pt x 842.14626pt>
 File: MO.png Graphic file (type png)
  <use MO.png>
 Package pdftex.def Info: MO.png used on input line 117.
@@ -412,7 +403,7 @@ Package pdftex.def Info: MO.png used on input line 117.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<MP.png, id=206, 854.19125pt x 842.14626pt>
+<MP.png, id=196, 854.19125pt x 842.14626pt>
 File: MP.png Graphic file (type png)
  <use MP.png>
 Package pdftex.def Info: MP.png used on input line 126.
@@ -421,7 +412,7 @@ Package pdftex.def Info: MP.png used on input line 126.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<MH.png, id=208, 854.19125pt x 907.39pt>
+<MH.png, id=198, 854.19125pt x 907.39pt>
 File: MH.png Graphic file (type png)
  <use MH.png>
 Package pdftex.def Info: MH.png used on input line 135.
@@ -430,7 +421,7 @@ Package pdftex.def Info: MH.png used on input line 135.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<MT.png, id=216, 854.19125pt x 907.39pt>
+<MT.png, id=206, 854.19125pt x 907.39pt>
 File: MT.png Graphic file (type png)
  <use MT.png>
 Package pdftex.def Info: MT.png used on input line 147.
@@ -439,165 +430,266 @@ Package pdftex.def Info: MT.png used on input line 147.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7 <./MH.png (PNG copy)> <./MT.png (PNG copy)>]
+<images/backpackComp.png, id=219, 474.77374pt x 346.29375pt>
+File: images/backpackComp.png Graphic file (type png)
 
-LaTeX Warning: Citation `slideVis_m' on page 8 undefined on input line 159.
+<use images/backpackComp.png>
+Package pdftex.def Info: images/backpackComp.png used on input line 162.
+(pdftex.def)             Requested size: 332.33936pt x 242.40396pt.
 
-[8]
+<images/bonsaiComp2.png, id=221, 292.09125pt x 323.2075pt>
+File: images/bonsaiComp2.png Graphic file (type png)
 
-LaTeX Warning: Citation `levoy_m' on page 9 undefined on input line 179.
+<use images/bonsaiComp2.png>
+Package pdftex.def Info: images/bonsaiComp2.png used on input line 172.
+(pdftex.def)             Requested size: 204.46246pt x 226.2437pt.
 
-<images/backpackOp.png, id=237, 488.82625pt x 589.20125pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8 <./images/backpackComp.png>]
+<images/carpComp.png, id=232, 350.30875pt x 166.6225pt>
+File: images/carpComp.png Graphic file (type png)
+
+<use images/carpComp.png>
+Package pdftex.def Info: images/carpComp.png used on input line 183.
+(pdftex.def)             Requested size: 141.65244pt x 67.37749pt.
+
+Underfull \hbox (badness 1221) in paragraph at lines 184--184
+[]\OT1/cmr/m/n/10.95 Figure 11: []Outline of the
+ []
+
+<images/carpComp2.png, id=233, 347.2975pt x 155.58125pt>
+File: images/carpComp2.png Graphic file (type png)
+
+<use images/carpComp2.png>
+Package pdftex.def Info: images/carpComp2.png used on input line 188.
+(pdftex.def)             Requested size: 141.65244pt x 63.45872pt.
+
+<images/carpComp4.png, id=234, 325.215pt x 152.57pt>
+File: images/carpComp4.png Graphic file (type png)
+
+<use images/carpComp4.png>
+Package pdftex.def Info: images/carpComp4.png used on input line 193.
+(pdftex.def)             Requested size: 141.65244pt x 66.45587pt.
+
+<images/orangeComp.png, id=237, 389.455pt x 343.2825pt>
+File: images/orangeComp.png Graphic file (type png)
+
+<use images/orangeComp.png>
+Package pdftex.def Info: images/orangeComp.png used on input line 205.
+(pdftex.def)             Requested size: 272.61664pt x 240.2961pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/pigComp.png, id=240, 511.9125pt x 478.78876pt>
+File: images/pigComp.png Graphic file (type png)
+
+<use images/pigComp.png>
+Package pdftex.def Info: images/pigComp.png used on input line 215.
+(pdftex.def)             Requested size: 177.05879pt x 165.59872pt.
+
+<images/pigComp2.png, id=241, 534.99875pt x 462.72874pt>
+File: images/pigComp2.png Graphic file (type png)
+
+<use images/pigComp2.png>
+Package pdftex.def Info: images/pigComp2.png used on input line 219.
+(pdftex.def)             Requested size: 221.32687pt x 191.4287pt.
+ [9 <./images/bonsaiComp2.png> <./images/carpComp.png> <./images/carpComp2.png>
+ <./images/carpComp4.png>]
+<images/bodyComp.png, id=260, 240.9pt x 328.22626pt>
+File: images/bodyComp.png Graphic file (type png)
+ <use images/bodyComp.png>
+Package pdftex.def Info: images/bodyComp.png used on input line 228.
+(pdftex.def)             Requested size: 177.05879pt x 241.2509pt.
+
+<images/bodyComp2.png, id=261, 210.7875pt x 304.13625pt>
+File: images/bodyComp2.png Graphic file (type png)
+
+<use images/bodyComp2.png>
+Package pdftex.def Info: images/bodyComp2.png used on input line 232.
+(pdftex.def)             Requested size: 221.32687pt x 319.34784pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10 <./images/orangeComp.png> <./images/pigComp.png> <./images/pigComp2.png>]
+<images/tomatoComp.png, id=272, 398.48875pt x 358.33875pt>
+File: images/tomatoComp.png Graphic file (type png)
+
+<use images/tomatoComp.png>
+Package pdftex.def Info: images/tomatoComp.png used on input line 243.
+(pdftex.def)             Requested size: 199.24388pt x 179.16893pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/toothComp.png, id=274, 181.67876pt x 297.11pt>
+File: images/toothComp.png Graphic file (type png)
+
+<use images/toothComp.png>
+Package pdftex.def Info: images/toothComp.png used on input line 253.
+(pdftex.def)             Requested size: 90.83914pt x 148.55463pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11 <./images/bodyComp.png> <./images/bodyComp2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 260--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <./images/tomatoComp.png> <./images/toothComp.png>]
+<images/backpackOp.png, id=293, 488.82625pt x 589.20125pt>
 File: images/backpackOp.png Graphic file (type png)
 
 <use images/backpackOp.png>
-Package pdftex.def Info: images/backpackOp.png used on input line 185.
+Package pdftex.def Info: images/backpackOp.png used on input line 270.
 (pdftex.def)             Requested size: 177.05879pt x 213.4159pt.
 
-<images/backpackOp2.png, id=239, 381.425pt x 276.03125pt>
+<images/backpackOp2.png, id=294, 381.425pt x 276.03125pt>
 File: images/backpackOp2.png Graphic file (type png)
 
 <use images/backpackOp2.png>
-Package pdftex.def Info: images/backpackOp2.png used on input line 189.
+Package pdftex.def Info: images/backpackOp2.png used on input line 274.
 (pdftex.def)             Requested size: 221.32687pt x 160.16983pt.
 
-<images/bonsaiOp.png, id=240, 448.67625pt x 382.42876pt>
+<images/bonsaiOp.png, id=296, 448.67625pt x 382.42876pt>
 File: images/bonsaiOp.png Graphic file (type png)
 
 <use images/bonsaiOp.png>
-Package pdftex.def Info: images/bonsaiOp.png used on input line 197.
+Package pdftex.def Info: images/bonsaiOp.png used on input line 283.
 (pdftex.def)             Requested size: 269.20782pt x 229.45901pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/carpOp.png, id=241, 292.09125pt x 185.69376pt>
+<images/carpOp.png, id=298, 292.09125pt x 185.69376pt>
 File: images/carpOp.png Graphic file (type png)
  <use images/carpOp.png>
-Package pdftex.def Info: images/carpOp.png used on input line 206.
+Package pdftex.def Info: images/carpOp.png used on input line 292.
 (pdftex.def)             Requested size: 292.09052pt x 185.6933pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/orangeOp.png, id=242, 364.36125pt x 350.30875pt>
+<images/orangeOp.png, id=301, 364.36125pt x 350.30875pt>
 File: images/orangeOp.png Graphic file (type png)
 
 <use images/orangeOp.png>
-Package pdftex.def Info: images/orangeOp.png used on input line 214.
+Package pdftex.def Info: images/orangeOp.png used on input line 301.
 (pdftex.def)             Requested size: 182.18018pt x 175.15395pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (5.12138pt too wide) in paragraph at lines 301--302
+[][] 
+ []
 
- [9 <./images/backpackOp.png> <./images/backpackOp2.png>]
-<images/pigOp.png, id=251, 568.1225pt x 434.62375pt>
+<images/orangeCompOp.png, id=302, 356.33125pt x 305.14pt>
+File: images/orangeCompOp.png Graphic file (type png)
+
+<use images/orangeCompOp.png>
+Package pdftex.def Info: images/orangeCompOp.png used on input line 306.
+(pdftex.def)             Requested size: 178.16518pt x 152.56961pt.
+ [13 <./images/backpackOp.png> <./images/backpackOp2.png>] <images/pigOp.png, i
+d=315, 568.1225pt x 434.62375pt>
 File: images/pigOp.png Graphic file (type png)
- <use images/pigOp.png>
-Package pdftex.def Info: images/pigOp.png used on input line 222.
+
+<use images/pigOp.png>
+Package pdftex.def Info: images/pigOp.png used on input line 318.
 (pdftex.def)             Requested size: 284.06055pt x 217.31134pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10 <./images/bonsaiOp.png> <./images/orangeOp.png>]
-<images/bodyOp2.png, id=260, 233.87375pt x 322.20375pt>
+ [14 <./images/bonsaiOp.png> <./images/orangeOp.png> <./images/orangeCompOp.png
+>]
+<images/bodyOp2.png, id=325, 233.87375pt x 322.20375pt>
 File: images/bodyOp2.png Graphic file (type png)
 
 <use images/bodyOp2.png>
-Package pdftex.def Info: images/bodyOp2.png used on input line 230.
-(pdftex.def)             Requested size: 233.87315pt x 322.20296pt.
+Package pdftex.def Info: images/bodyOp2.png used on input line 327.
+(pdftex.def)             Requested size: 210.4844pt x 289.98068pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11 <./images/carpOp.png> <./images/pigOp.png>]
-<images/tomatoOp.png, id=269, 392.46625pt x 432.61626pt>
+ [15 <./images/carpOp.png> <./images/pigOp.png>]
+<images/tomatoOp.png, id=337, 392.46625pt x 432.61626pt>
 File: images/tomatoOp.png Graphic file (type png)
 
 <use images/tomatoOp.png>
-Package pdftex.def Info: images/tomatoOp.png used on input line 239.
+Package pdftex.def Info: images/tomatoOp.png used on input line 336.
 (pdftex.def)             Requested size: 141.65244pt x 156.14441pt.
 
-<images/tomatoOp2.png, id=270, 372.39125pt x 406.51875pt>
+<images/tomatoOp2.png, id=338, 372.39125pt x 406.51875pt>
 File: images/tomatoOp2.png Graphic file (type png)
 
 <use images/tomatoOp2.png>
-Package pdftex.def Info: images/tomatoOp2.png used on input line 243.
+Package pdftex.def Info: images/tomatoOp2.png used on input line 340.
 (pdftex.def)             Requested size: 141.65244pt x 154.64pt.
 
-<images/tomatoOp3.png, id=271, 396.48125pt x 415.5525pt>
+<images/tomatoOp3.png, id=339, 396.48125pt x 415.5525pt>
 File: images/tomatoOp3.png Graphic file (type png)
 
 <use images/tomatoOp3.png>
-Package pdftex.def Info: images/tomatoOp3.png used on input line 247.
+Package pdftex.def Info: images/tomatoOp3.png used on input line 344.
 (pdftex.def)             Requested size: 141.65244pt x 148.47011pt.
 
-<images/toothOp.png, id=272, 217.81375pt x 302.12875pt>
+<images/toothOp.png, id=342, 217.81375pt x 302.12875pt>
 File: images/toothOp.png Graphic file (type png)
 
 <use images/toothOp.png>
-Package pdftex.def Info: images/toothOp.png used on input line 257.
+Package pdftex.def Info: images/toothOp.png used on input line 355.
 (pdftex.def)             Requested size: 177.05879pt x 245.59425pt.
 
-<images/toothOp2.png, id=273, 275.0275pt x 315.1775pt>
+<images/toothOp2.png, id=343, 275.0275pt x 315.1775pt>
 File: images/toothOp2.png Graphic file (type png)
 
 <use images/toothOp2.png>
-Package pdftex.def Info: images/toothOp2.png used on input line 261.
+Package pdftex.def Info: images/toothOp2.png used on input line 359.
 (pdftex.def)             Requested size: 221.32687pt x 253.64761pt.
- [12 <./images/bodyOp2.png> <./images/tomatoOp.png> <./images/tomatoOp2.png> <.
+ [16 <./images/bodyOp2.png> <./images/tomatoOp.png> <./images/tomatoOp2.png> <.
 /images/tomatoOp3.png>]
-<hicarp.png, id=286, 1694.33pt x 1053.9375pt>
-File: hicarp.png Graphic file (type png)
- <use hicarp.png>
-Package pdftex.def Info: hicarp.png used on input line 268.
-(pdftex.def)             Requested size: 636.60028pt x 395.98143pt.
+Underfull \hbox (badness 10000) in paragraph at lines 367--368
+[]\OT1/cmr/m/n/10.95 https://dlwpswbsp.tue.nl/120-2014/4d0982b89c664c579bd307b3
+c4ae82ca/Slides/4-
+ []
 
-
-LaTeX Warning: Float too large for page by 25.72917pt on input line 271.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 272.
-[13 <./images/toothOp.png> <./images/toothOp2.png>] [14 <./hicarp.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 272.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 371.
+[17 <./images/toothOp.png> <./images/toothOp2.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 371.
 
 (./Report_JvOorschot_0721913.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 272.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 272.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 371.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 371.
 Package rerunfilecheck Info: File `Report_JvOorschot_0721913.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 8ED431589DB05E744BE14EF76B339EB4;1780.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 272.
+(rerunfilecheck)             Checksum: 2AB74A5CB24465860FAE6B9961DBF500;1673.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 371.
  ) 
 Here is how much of TeX's memory you used:
- 6523 strings out of 493308
- 93532 string characters out of 6137822
- 181946 words of memory out of 5000000
- 9813 multiletter control sequences out of 15000+600000
+ 6612 strings out of 493308
+ 95239 string characters out of 6137822
+ 183008 words of memory out of 5000000
+ 9874 multiletter control sequences out of 15000+600000
  13014 words of font info for 49 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 29i,10n,44p,692b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,10n,44p,695b,355s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
-ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
-l/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/loc
-al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
-l/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
-texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Report_JvOorschot_0721913.pdf (14 pages, 2886449 bytes).
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
+sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></us
+r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Report_JvOorschot_0721913.pdf (17 pages, 4035540 bytes).
 PDF statistics:
- 355 PDF objects out of 1000 (max. 8388607)
- 291 compressed objects within 3 object streams
- 69 named destinations out of 1000 (max. 500000)
- 362 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 413 PDF objects out of 1000 (max. 8388607)
+ 324 compressed objects within 4 object streams
+ 85 named destinations out of 1000 (max. 500000)
+ 406 words of extra memory for PDF output out of 10000 (max. 10000000)
 

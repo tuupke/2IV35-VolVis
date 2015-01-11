@@ -10,23 +10,21 @@
 \contentsline {subsection}{\numberline {2.6}Human}{6}{subsection.2.6}
 \contentsline {subsection}{\numberline {2.7}Tomato}{6}{subsection.2.7}
 \contentsline {subsection}{\numberline {2.8}Tooth}{7}{subsection.2.8}
-\contentsline {section}{\numberline {3}Transfer function}{8}{section.3}
-\contentsline {subsection}{\numberline {3.1}Carp}{8}{subsection.3.1}
-\contentsline {section}{\numberline {4}Compositing}{8}{section.4}
-\contentsline {subsection}{\numberline {4.1}Backpack}{8}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Bonsai}{8}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Carp}{8}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Orange}{8}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Pig}{8}{subsection.4.5}
-\contentsline {subsection}{\numberline {4.6}Human}{8}{subsection.4.6}
-\contentsline {subsection}{\numberline {4.7}Tomato}{8}{subsection.4.7}
-\contentsline {subsection}{\numberline {4.8}Tooth}{8}{subsection.4.8}
-\contentsline {section}{\numberline {5}Opacity weighting}{9}{section.5}
-\contentsline {subsection}{\numberline {5.1}Backpack}{9}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Bonsai}{9}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Carp}{9}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}Orange}{10}{subsection.5.4}
-\contentsline {subsection}{\numberline {5.5}Pig}{11}{subsection.5.5}
-\contentsline {subsection}{\numberline {5.6}Human}{12}{subsection.5.6}
-\contentsline {subsection}{\numberline {5.7}Tomato}{12}{subsection.5.7}
-\contentsline {subsection}{\numberline {5.8}Tooth}{13}{subsection.5.8}
+\contentsline {section}{\numberline {3}Compositing}{8}{section.3}
+\contentsline {subsection}{\numberline {3.1}Backpack}{8}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Bonsai}{8}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Carp}{8}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Orange}{9}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Pig}{9}{subsection.3.5}
+\contentsline {subsection}{\numberline {3.6}Human}{10}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}Tomato}{11}{subsection.3.7}
+\contentsline {subsection}{\numberline {3.8}Tooth}{11}{subsection.3.8}
+\contentsline {section}{\numberline {4}Opacity weighting}{12}{section.4}
+\contentsline {subsection}{\numberline {4.1}Backpack}{13}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Bonsai}{13}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Carp}{13}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Orange}{13}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Pig}{14}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}Human}{15}{subsection.4.6}
+\contentsline {subsection}{\numberline {4.7}Tomato}{16}{subsection.4.7}
+\contentsline {subsection}{\numberline {4.8}Tooth}{17}{subsection.4.8}
