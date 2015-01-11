@@ -293,32 +293,10 @@ public class OpacityRenderer extends Renderer implements TFChangeListener {
                         + volumeCenter[2];
 
 //                int val = getVoxel(pixelCoord);
-                short[] blub = getVoxels(pixelCoord, viewVec);
-                double c_red, c_green, c_blue, c_mult, c_alpha;
-                c_red = c_green = c_blue = c_alpha = 0;
-                c_mult = 1;
-                for (int q = blub.length - 1; q >= 0; q--) {
-//                    System.out.println(blub[q]);
-//                    if(blub[q]==1 || blub[q]){
-//                        continue;
-//                    }
-//                    System.out.println(blub[q]);
-                    TFColor voxelColor = tFunc.getColor(blub[q]);
-
-                    double curMult = (voxelColor.a <= 1.0 ? voxelColor.a : 1);
-                    c_red *= (1-curMult);
-                    c_green *= (1-curMult);
-                    c_blue *= (1-curMult);
-                    c_red += curMult * (voxelColor.r <= 1.0 ? voxelColor.r : 1);
-                    c_green += curMult * (voxelColor.g <= 1.0 ? voxelColor.g : 1);
-                    c_blue += curMult * (voxelColor.b <= 1.0 ? voxelColor.b : 1);
-                    c_alpha += curMult * (voxelColor.a <= 1.0 ? voxelColor.a : 1);
-                    //c_mult = (1 - (voxelColor.a <= 1.0 ? voxelColor.a : 1));
-                }
-                int red = (int) Math.round(c_red * 255);
-                int blue = (int) Math.round(c_blue * 255);
-                int green = (int) Math.round(c_green * 255);
-                int alpha = (int) Math.round(c_alpha * 255);
+                double[] blub = getRayColor(pixelCoord, viewVec);
+                int red = (int) Math.round(blub[0] * 255);
+                int blue = (int) Math.round(blub[2] * 255);
+                int green = (int) Math.round(blub[1] * 255);
                 
                 // (c_alpha << 24) | 
                 int pixelColor = (254 << 24) | (red << 16) | (green << 8) | blue;
