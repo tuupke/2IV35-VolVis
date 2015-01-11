@@ -75,7 +75,7 @@ public class VolVisApplication extends javax.swing.JFrame {
         TFRenderer.addTFChangeListener(visualization);
         tabbedPanel.addTab("transfer", TFRenderer.getPanel());*/
 
-        compRenderer = new CompRenderer();
+        compRenderer = new CompRenderer(visualization);
         visualization.addRenderer(compRenderer);
         compRenderer.addTFChangeListener(visualization);
         tabbedPanel.addTab("Composition", compRenderer.getPanel());
@@ -244,6 +244,7 @@ public class VolVisApplication extends javax.swing.JFrame {
             MIPRendererhi.setVolume(volume);
             //TFRenderer.setVolume(volume);
             opRenderer.setVolume(volume);
+            compRenderer.setVolume(volume);
             visualization.getRenderers().get(0).setVisible(true);
             visualization.update();
 

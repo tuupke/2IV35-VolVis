@@ -1,24 +1,14 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2013.9.27)  15 OCT 2013 01:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.1.11)  11 JAN 2015 22:35
 entering extended mode
-**D:/dropbox/Dropbox/tue/semester*4.1/Visualizatie/set2/Report_JvOorschot_07219
-13.tex
-
-("D:/dropbox/Dropbox/tue/semester 4.1/Visualizatie/set2/Report_JvOorschot_07219
-13.tex"
-LaTeX2e <2009/09/24>
-Babel <v3.8l> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
-vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
-an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
-romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
-sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
-senglishmax, welsh, loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Report_JvOorschot_0721913.tex
+(./Report_JvOorschot_0721913.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -33,38 +23,45 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\a4wide\a4wide.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/a4wide/a4wide.sty
 Package: a4wide 1994/08/30
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\ntgclass\a4.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/ntgclass/a4.sty
 Package: a4 2004/04/15 v1.2g A4 based page layout
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
-File: pdftex.def 2010/11/26 v0.05c Graphics/color for pdfTeX
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
 \Gread@gobject=\count87
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip43
 \f@ncyO@elh=\skip44
 \f@ncyO@erh=\skip45
@@ -75,41 +72,41 @@ File: pdftex.def 2010/11/26 v0.05c Graphics/color for pdfTeX
 \f@ncyO@olf=\skip50
 \f@ncyO@orf=\skip51
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
-Package: amsmath 2000/07/18 v2.13 AMS math features
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip52
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks15
 \ex@=\dimen105
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen106
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count88
-LaTeX Info: Redefining \frac on input line 211.
+LaTeX Info: Redefining \frac on input line 210.
 \uproot@=\count89
 \leftroot@=\count90
-LaTeX Info: Redefining \overline on input line 307.
+LaTeX Info: Redefining \overline on input line 306.
 \classnum@=\count91
 \DOTSCASE@=\count92
-LaTeX Info: Redefining \ldots on input line 379.
-LaTeX Info: Redefining \dots on input line 382.
-LaTeX Info: Redefining \cdots on input line 467.
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen107
-LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count93
 \c@MaxMatrixCols=\count94
 \dotsspace@=\muskip10
@@ -130,161 +127,477 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \multlinegap=\skip53
 \multlinetaggap=\skip54
 \mathdisplay@stack=\toks19
-LaTeX Info: Redefining \[ on input line 2666.
-LaTeX Info: Redefining \] on input line 2667.
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
-Package: amssymb 2009/06/22 v3.00
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
-Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\algorithms\algorithmic.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count100
+\float@exts=\toks20
+\float@box=\box28
+\@float@everytoks=\toks21
+\@floatcapt=\box29
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@ALC@unique=\count100
-\c@ALC@line=\count101
-\c@ALC@rem=\count102
-\c@ALC@depth=\count103
+\c@ALC@unique=\count101
+\c@ALC@line=\count102
+\c@ALC@rem=\count103
+\c@ALC@depth=\count104
 \ALC@tlm=\skip55
 \algorithmicindent=\skip56
 )
-("D:\dropbox\Dropbox\tue\semester 4.1\Visualizatie\set2\Report_JvOorschot_07219
-13.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
- ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count104
-\scratchdimen=\dimen114
-\scratchbox=\box28
-\nofMPsegments=\count105
-\nofMParguments=\count106
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count107
-\MPscratchDim=\dimen115
-\MPnumerator=\count108
-\everyMPtoPDFconversion=\toks21
-)
-LaTeX Font Info:    Try loading font information for U+msa on input line 45.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 45.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen114
+\Hy@linkcounter=\count105
+\Hy@pagecounter=\count106
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count107
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count108
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen115
+\Fld@menulength=\count109
+\Field@Width=\dimen116
+\Fld@charsize=\dimen117
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count110
+\c@Item=\count111
+\c@Hfootnote=\count112
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count113
+\c@bookmark@seq@number=\count114
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip57
+)
+(./Report_JvOorschot_0721913.aux
+
+LaTeX Warning: Label `carpOp' multiply defined.
+
+
+LaTeX Warning: Label `toothOp' multiply defined.
+
+
+LaTeX Warning: Label `toothOp2' multiply defined.
+
+)
+\openout1 = `Report_JvOorschot_0721913.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+ (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count115
+\scratchdimen=\dimen118
+\scratchbox=\box30
+\nofMPsegments=\count116
+\nofMParguments=\count117
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count118
+\MPscratchDim=\dimen119
+\MPnumerator=\count119
+\makeMPintoPDFobject=\count120
+\everyMPtoPDFconversion=\toks23
+) (/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box31
+Package hyperref Info: Link coloring OFF on input line 46.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count121
+)
+LaTeX Info: Redefining \ref on input line 46.
+LaTeX Info: Redefining \pageref on input line 46.
+LaTeX Info: Redefining \nameref on input line 46.
+
+(./Report_JvOorschot_0721913.out) (./Report_JvOorschot_0721913.out)
+\@outlinefile=\write3
+\openout3 = `Report_JvOorschot_0721913.out'.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 48.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 48.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [1{C:/Users/s091161/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+ [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-("D:\dropbox\Dropbox\tue\semester 4.1\Visualizatie\set2\Report_JvOorschot_07219
-13.toc")
-\tf@toc=\write3
- [2] <MB.png, id=14, 854.19125pt x 842.14626pt>
+(./Report_JvOorschot_0721913.toc)
+\tf@toc=\write4
+\openout4 = `Report_JvOorschot_0721913.toc'.
+
+ [2]
+<MB.png, id=182, 854.19125pt x 842.14626pt>
 File: MB.png Graphic file (type png)
  <use MB.png>
+Package pdftex.def Info: MB.png used on input line 86.
+(pdftex.def)             Requested size: 221.32687pt x 218.1947pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<MBon.png, id=15, 854.19125pt x 842.14626pt>
+<MBon.png, id=184, 854.19125pt x 842.14626pt>
 File: MBon.png Graphic file (type png)
- <use MBon.png> [3]
-<MCT.png, id=21, 854.19125pt x 842.14626pt>
+ <use MBon.png>
+Package pdftex.def Info: MBon.png used on input line 94.
+(pdftex.def)             Requested size: 221.32687pt x 218.1947pt.
+ [3]
+<MCT.png, id=194, 854.19125pt x 842.14626pt>
 File: MCT.png Graphic file (type png)
  <use MCT.png>
-<MCS.png, id=22, 854.19125pt x 842.14626pt>
+Package pdftex.def Info: MCT.png used on input line 102.
+(pdftex.def)             Requested size: 221.32687pt x 218.1947pt.
+
+<MCS.png, id=195, 854.19125pt x 842.14626pt>
 File: MCS.png Graphic file (type png)
  <use MCS.png>
+Package pdftex.def Info: MCS.png used on input line 108.
+(pdftex.def)             Requested size: 221.32687pt x 218.1947pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<MO.png, id=23, 854.19125pt x 842.14626pt>
+<MO.png, id=197, 854.19125pt x 842.14626pt>
 File: MO.png Graphic file (type png)
- <use MO.png> [4 <D:/dropbox/Dropbox/tue/semester 4.1/Visualizatie/set2/MB.png 
-(PNG copy)> <D:/dropbox/Dropbox/tue/semester 4.1/Visualizatie/set2/MBon.png (PN
-G copy)>]
+ <use MO.png>
+Package pdftex.def Info: MO.png used on input line 117.
+(pdftex.def)             Requested size: 221.32687pt x 218.1947pt.
+ [4 <./MB.png (PNG copy)> <./MBon.png (PNG copy)>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<MP.png, id=27, 854.19125pt x 842.14626pt>
+<MP.png, id=206, 854.19125pt x 842.14626pt>
 File: MP.png Graphic file (type png)
  <use MP.png>
+Package pdftex.def Info: MP.png used on input line 126.
+(pdftex.def)             Requested size: 221.32687pt x 218.1947pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<MH.png, id=28, 854.19125pt x 907.39pt>
+<MH.png, id=208, 854.19125pt x 907.39pt>
 File: MH.png Graphic file (type png)
- <use MH.png> [5 <D:/dropbox/Dropbox/tue/semester 4.1/Visualizatie/set2/MCT.png
- (PNG copy)> <D:/dropbox/Dropbox/tue/semester 4.1/Visualizatie/set2/MCS.png (PN
-G copy)>]
+ <use MH.png>
+Package pdftex.def Info: MH.png used on input line 135.
+(pdftex.def)             Requested size: 221.32687pt x 235.09894pt.
+ [5 <./MCT.png (PNG copy)> <./MCS.png (PNG copy)>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<MT.png, id=32, 854.19125pt x 907.39pt>
+<MT.png, id=216, 854.19125pt x 907.39pt>
 File: MT.png Graphic file (type png)
- <use MT.png> [6 <D:/dropbox/Dropbox/tue/semester 4.1/Visualizatie/set2/MO.png 
-(PNG copy)> <D:/dropbox/Dropbox/tue/semester 4.1/Visualizatie/set2/MP.png (PNG 
-copy)>]
+ <use MT.png>
+Package pdftex.def Info: MT.png used on input line 147.
+(pdftex.def)             Requested size: 221.32687pt x 235.09894pt.
+ [6 <./MO.png (PNG copy)> <./MP.png (PNG copy)>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7 <D:/dropbox/Dropbox/tue/semester 4.1/Visualizatie/set2/MH.png (PNG copy)> <
-D:/dropbox/Dropbox/tue/semester 4.1/Visualizatie/set2/MT.png (PNG copy)>]
-<hicarp.png, id=40, 1694.33pt x 1053.9375pt>
+ [7 <./MH.png (PNG copy)> <./MT.png (PNG copy)>]
+
+LaTeX Warning: Citation `slideVis_m' on page 8 undefined on input line 159.
+
+[8]
+
+LaTeX Warning: Citation `levoy_m' on page 9 undefined on input line 179.
+
+<images/backpackOp.png, id=237, 488.82625pt x 589.20125pt>
+File: images/backpackOp.png Graphic file (type png)
+
+<use images/backpackOp.png>
+Package pdftex.def Info: images/backpackOp.png used on input line 185.
+(pdftex.def)             Requested size: 177.05879pt x 213.4159pt.
+
+<images/backpackOp2.png, id=239, 381.425pt x 276.03125pt>
+File: images/backpackOp2.png Graphic file (type png)
+
+<use images/backpackOp2.png>
+Package pdftex.def Info: images/backpackOp2.png used on input line 189.
+(pdftex.def)             Requested size: 221.32687pt x 160.16983pt.
+
+<images/bonsaiOp.png, id=240, 448.67625pt x 382.42876pt>
+File: images/bonsaiOp.png Graphic file (type png)
+
+<use images/bonsaiOp.png>
+Package pdftex.def Info: images/bonsaiOp.png used on input line 197.
+(pdftex.def)             Requested size: 269.20782pt x 229.45901pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/carpOp.png, id=241, 292.09125pt x 185.69376pt>
+File: images/carpOp.png Graphic file (type png)
+ <use images/carpOp.png>
+Package pdftex.def Info: images/carpOp.png used on input line 206.
+(pdftex.def)             Requested size: 292.09052pt x 185.6933pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/orangeOp.png, id=242, 364.36125pt x 350.30875pt>
+File: images/orangeOp.png Graphic file (type png)
+
+<use images/orangeOp.png>
+Package pdftex.def Info: images/orangeOp.png used on input line 214.
+(pdftex.def)             Requested size: 182.18018pt x 175.15395pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9 <./images/backpackOp.png> <./images/backpackOp2.png>]
+<images/pigOp.png, id=251, 568.1225pt x 434.62375pt>
+File: images/pigOp.png Graphic file (type png)
+ <use images/pigOp.png>
+Package pdftex.def Info: images/pigOp.png used on input line 222.
+(pdftex.def)             Requested size: 284.06055pt x 217.31134pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10 <./images/bonsaiOp.png> <./images/orangeOp.png>]
+<images/bodyOp2.png, id=260, 233.87375pt x 322.20375pt>
+File: images/bodyOp2.png Graphic file (type png)
+
+<use images/bodyOp2.png>
+Package pdftex.def Info: images/bodyOp2.png used on input line 230.
+(pdftex.def)             Requested size: 233.87315pt x 322.20296pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11 <./images/carpOp.png> <./images/pigOp.png>]
+<images/tomatoOp.png, id=269, 392.46625pt x 432.61626pt>
+File: images/tomatoOp.png Graphic file (type png)
+
+<use images/tomatoOp.png>
+Package pdftex.def Info: images/tomatoOp.png used on input line 239.
+(pdftex.def)             Requested size: 141.65244pt x 156.14441pt.
+
+<images/tomatoOp2.png, id=270, 372.39125pt x 406.51875pt>
+File: images/tomatoOp2.png Graphic file (type png)
+
+<use images/tomatoOp2.png>
+Package pdftex.def Info: images/tomatoOp2.png used on input line 243.
+(pdftex.def)             Requested size: 141.65244pt x 154.64pt.
+
+<images/tomatoOp3.png, id=271, 396.48125pt x 415.5525pt>
+File: images/tomatoOp3.png Graphic file (type png)
+
+<use images/tomatoOp3.png>
+Package pdftex.def Info: images/tomatoOp3.png used on input line 247.
+(pdftex.def)             Requested size: 141.65244pt x 148.47011pt.
+
+<images/toothOp.png, id=272, 217.81375pt x 302.12875pt>
+File: images/toothOp.png Graphic file (type png)
+
+<use images/toothOp.png>
+Package pdftex.def Info: images/toothOp.png used on input line 257.
+(pdftex.def)             Requested size: 177.05879pt x 245.59425pt.
+
+<images/toothOp2.png, id=273, 275.0275pt x 315.1775pt>
+File: images/toothOp2.png Graphic file (type png)
+
+<use images/toothOp2.png>
+Package pdftex.def Info: images/toothOp2.png used on input line 261.
+(pdftex.def)             Requested size: 221.32687pt x 253.64761pt.
+ [12 <./images/bodyOp2.png> <./images/tomatoOp.png> <./images/tomatoOp2.png> <.
+/images/tomatoOp3.png>]
+<hicarp.png, id=286, 1694.33pt x 1053.9375pt>
 File: hicarp.png Graphic file (type png)
  <use hicarp.png>
+Package pdftex.def Info: hicarp.png used on input line 268.
+(pdftex.def)             Requested size: 636.60028pt x 395.98143pt.
 
-LaTeX Warning: Float too large for page by 25.72917pt on input line 161.
+
+LaTeX Warning: Float too large for page by 25.72917pt on input line 271.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8] [9 <D:/dropbox/Dropbox/tue/semester 4.1/Visualizatie/set2/hicarp.png>]
-("D:\dropbox\Dropbox\tue\semester 4.1\Visualizatie\set2\Report_JvOorschot_07219
-13.aux") ) 
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 272.
+[13 <./images/toothOp.png> <./images/toothOp2.png>] [14 <./hicarp.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 272.
+
+(./Report_JvOorschot_0721913.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 272.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 272.
+Package rerunfilecheck Info: File `Report_JvOorschot_0721913.out' has not chang
+ed.
+(rerunfilecheck)             Checksum: 8ED431589DB05E744BE14EF76B339EB4;1780.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 272.
+ ) 
 Here is how much of TeX's memory you used:
- 2218 strings out of 494019
- 26913 string characters out of 3146492
- 85491 words of memory out of 3000000
- 5485 multiletter control sequences out of 15000+200000
- 13014 words of font info for 49 fonts, out of 3000000 for 9000
- 714 hyphenation exceptions out of 8191
- 27i,10n,44p,608b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Report_JvOorschot_0721913.pdf (9 pages, 1515386 bytes).
+ 6523 strings out of 493308
+ 93532 string characters out of 6137822
+ 181946 words of memory out of 5000000
+ 9813 multiletter control sequences out of 15000+600000
+ 13014 words of font info for 49 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 29i,10n,44p,692b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
+l/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/loc
+al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
+l/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
+texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on Report_JvOorschot_0721913.pdf (14 pages, 2886449 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 355 PDF objects out of 1000 (max. 8388607)
+ 291 compressed objects within 3 object streams
+ 69 named destinations out of 1000 (max. 500000)
+ 362 words of extra memory for PDF output out of 10000 (max. 10000000)
 
